@@ -16,17 +16,14 @@ console.log(cognomi);
 
 
 function nomeCasuale(nomi, cognomi) {
-   var nomeCasuale = nomi[Math.floor(Math.random() * nomi.length)];
-
-   var cognomeCasuale = cognomi[Math.floor(Math.random() * cognomi.length)];
-    
-
-   var invitati = nomeCasuale + cognomeCasuale;
-    console.log("Il signor " + invitati + " è presente nella lista degli invitati");
-    return nomeCasuale + cognomeCasuale
+    var nomeCasuale = nomi[Math.floor(Math.random() * nomi.length)];
+    var cognomeCasuale = cognomi[Math.floor(Math.random() * cognomi.length)];
+    var invitato = nomeCasuale + " " + cognomeCasuale;
+    return invitato;
 }
 
 for (var i=0; i<10; i++){
-  console.log(nomeCasuale (nomi, cognomi));
+    var invitato = nomeCasuale(nomi, cognomi);
+    document.getElementById("lista").innerHTML += "<li> Il signor " + invitato + " è invitato</li>";
 }
 
