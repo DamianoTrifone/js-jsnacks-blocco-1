@@ -7,3 +7,26 @@
 // Stampa l'array nella console.
 
 // Snack 4
+
+var nomi = ["Damiano","Carola","Fabio","Gabriele","Valeria"];
+console.log(nomi);
+
+var cognomi = ["Giuffrida", "Santonocito", "Pappalardo", "Cammarata", "Spoto"];
+console.log(cognomi);
+
+
+function nomeCasuale(nomi, cognomi) {
+   var nomeCasuale = nomi[Math.floor(Math.random() * nomi.length)];
+
+   var cognomeCasuale = cognomi[Math.floor(Math.random() * cognomi.length)];
+    
+
+   var invitati = nomeCasuale + cognomeCasuale;
+    console.log("Il signor " + invitati + " è presente nella lista degli invitati");
+    return nomeCasuale + cognomeCasuale
+}
+
+for (var i=0; i<10; i++){
+  console.log(nomeCasuale (nomi, cognomi));
+}
+
